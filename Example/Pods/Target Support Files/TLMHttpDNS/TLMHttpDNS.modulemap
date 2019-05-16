@@ -1,0 +1,6 @@
+framework module TLMHttpDNS {
+  umbrella header "TLMHttpDNS-umbrella.h"
+
+  export *
+  module * { export * }
+}

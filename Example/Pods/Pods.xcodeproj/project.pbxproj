@@ -8,15 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		02B7C39109FC0915EBAB92300CD4CD2D /* Pods-TLMHttpDNS_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C59D7BF358945107DE1F7EF2D635604 /* Pods-TLMHttpDNS_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		084989C27AFCD0A39F91C7B7D943E367 /* TLMHttpDNS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 796B36B3F95D3D4EEBE0D0804FCBD52B /* TLMHttpDNS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		20E20265F2CA58561516D972BAF8663B /* TLMHttpDNS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB9077E326A0DE836ECE045D8B50C5E /* TLMHttpDNS-dummy.m */; };
+		0A566AFDF352CBCB9B6D429DAA232100 /* NSURLSession+SynchronousTask.m in Sources */ = {isa = PBXBuildFile; fileRef = C9343E3F2EC6F382F5232A35BEA183DB /* NSURLSession+SynchronousTask.m */; };
+		25549D801264AF4705A988D8E7F3DEC0 /* TLMURLProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = BAB5487A1D6621149F5B66B3E60E1FF8 /* TLMURLProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31602368B25EA9A714BD75B82ED8599C /* TLMHttpDNS.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D051209E7C30659E856F0AB5DECFE25 /* TLMHttpDNS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		377AED440969D2D0129DDE95EA12C08F /* TLMIPDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = D84CD74C0627F60FB87C3B51B824E50D /* TLMIPDefinition.m */; };
 		419F4A768F9EA7C4BCDE1E9F93028FA1 /* Pods-TLMHttpDNS_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 73D46C72128BB114E6A4A11DA3E1E032 /* Pods-TLMHttpDNS_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		452BA2169C3E48CFC304115F94BEEBB6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		4F1CA2BC7FCD9D9ADA76F5FF9D116836 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		5D61812EA91AE01EDB4883B1E328A7D7 /* Pods-TLMHttpDNS_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DDE5CF8CB5659D8163A7AB796EF14C /* Pods-TLMHttpDNS_Example-dummy.m */; };
+		767CE09322E46E5184BEB5C8BF1CF8DD /* TLMURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 127FBCA19DD07ED9C3D0DA5436C6264A /* TLMURLProtocol.m */; };
 		79E92C704C2ACCBE7AFC8C22C4B1D7A2 /* Pods-TLMHttpDNS_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F786089E414C003F537E1D3DF6845D26 /* Pods-TLMHttpDNS_Tests-dummy.m */; };
+		80E8B628B96E35F7DD6200F2A2373777 /* TLMHttpDNS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EE71CF9109C95084D7EE39745A0DC8 /* TLMHttpDNS-dummy.m */; };
+		8A73F59531264F69217D4D4E7A999BE6 /* TLMHttpDNS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B418DD8E4BD0368908546DDB4F55E8C2 /* TLMHttpDNS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95C8DB5D0B4FBFFA73C9B17D92B407B6 /* TLMHttpDNS.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E1C5C5B838B75DF8FD2171A6938C2EF /* TLMHttpDNS.m */; };
+		96D5EB6426D21F8E16A4972A3F3D5F37 /* NSURLProtocol+WKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18747804919CEA7DB9E0DDCDF73256DD /* NSURLProtocol+WKWebView.m */; };
+		9F4B658089DD39AB62C9EA8C625DC03D /* NSURLSession+SynchronousTask.h in Headers */ = {isa = PBXBuildFile; fileRef = D7D21FA3D45D5D265CBC143C103B5360 /* NSURLSession+SynchronousTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAB6A44BB6263D2302315509C34CF3CB /* NSURLProtocol+WKWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 22931D3C3859E0A5F2C492F681C1F3B4 /* NSURLProtocol+WKWebView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1FEF24C5B9A34FDCE2CB4970FEC46BC /* TLMIPDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 21B91AF45C833887CB2264D50988C75C /* TLMIPDefinition.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E82A52294FBB154BAC013AA767760FA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
-		F76452AA1C046F1530038EACA405BF4F /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF071EA4256EA849EFCC96775E39F30 /* ReplaceMe.m */; };
+		EAC677F79BDE8A557C8482A133B3A477 /* NSURLSession+hook.h in Headers */ = {isa = PBXBuildFile; fileRef = 003CDFEB46397462F7055E722B35616B /* NSURLSession+hook.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FDA70CE474CAED13629C3BE04573CAFE /* NSURLSession+hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5EE391BE4B315B5CC65FD61DAD9FA3 /* NSURLSession+hook.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,38 +48,49 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		003CDFEB46397462F7055E722B35616B /* NSURLSession+hook.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLSession+hook.h"; path = "TLMHttpDNS/Classes/NSURLSession+hook.h"; sourceTree = "<group>"; };
+		01EE71CF9109C95084D7EE39745A0DC8 /* TLMHttpDNS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TLMHttpDNS-dummy.m"; sourceTree = "<group>"; };
+		0973F913ED43955E68E31D59D4CAE3EE /* TLMHttpDNS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TLMHttpDNS.xcconfig; sourceTree = "<group>"; };
 		0AC54AEEFD0431FA77517B1C77D74F00 /* Pods-TLMHttpDNS_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TLMHttpDNS_Tests-Info.plist"; sourceTree = "<group>"; };
-		12384C241C368860B3959E7102056F5C /* TLMHttpDNS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TLMHttpDNS.modulemap; sourceTree = "<group>"; };
-		12C3EF7A5E1C6AD354093B5932FC585C /* TLMHttpDNS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TLMHttpDNS-Info.plist"; sourceTree = "<group>"; };
+		127FBCA19DD07ED9C3D0DA5436C6264A /* TLMURLProtocol.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TLMURLProtocol.m; path = TLMHttpDNS/Classes/TLMURLProtocol.m; sourceTree = "<group>"; };
+		18747804919CEA7DB9E0DDCDF73256DD /* NSURLProtocol+WKWebView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLProtocol+WKWebView.m"; path = "TLMHttpDNS/Classes/NSURLProtocol+WKWebView.m"; sourceTree = "<group>"; };
+		21B91AF45C833887CB2264D50988C75C /* TLMIPDefinition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TLMIPDefinition.h; path = TLMHttpDNS/Classes/TLMIPDefinition.h; sourceTree = "<group>"; };
+		22931D3C3859E0A5F2C492F681C1F3B4 /* NSURLProtocol+WKWebView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLProtocol+WKWebView.h"; path = "TLMHttpDNS/Classes/NSURLProtocol+WKWebView.h"; sourceTree = "<group>"; };
 		238341A73287ED868DFF02B7AE5AA951 /* Pods-TLMHttpDNS_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLMHttpDNS_Example.release.xcconfig"; sourceTree = "<group>"; };
 		29BE81D30CD57C74F3F974C08448849A /* Pods-TLMHttpDNS_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLMHttpDNS_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		2D5EE391BE4B315B5CC65FD61DAD9FA3 /* NSURLSession+hook.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLSession+hook.m"; path = "TLMHttpDNS/Classes/NSURLSession+hook.m"; sourceTree = "<group>"; };
 		399FEA28697C2DA4B7E045F682F7BB54 /* Pods-TLMHttpDNS_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLMHttpDNS_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		3AF071EA4256EA849EFCC96775E39F30 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = TLMHttpDNS/Classes/ReplaceMe.m; sourceTree = "<group>"; };
 		4962CBC3DAD1BF9D8E7C23A3D8370157 /* Pods-TLMHttpDNS_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TLMHttpDNS_Example-frameworks.sh"; sourceTree = "<group>"; };
-		4C823CF9D11791D53A461C433604B9C5 /* TLMHttpDNS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TLMHttpDNS-prefix.pch"; sourceTree = "<group>"; };
 		73D46C72128BB114E6A4A11DA3E1E032 /* Pods-TLMHttpDNS_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TLMHttpDNS_Tests-umbrella.h"; sourceTree = "<group>"; };
-		747AA439F0C6D9A384A7B55FBD091406 /* Pods_TLMHttpDNS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TLMHttpDNS_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		747AA439F0C6D9A384A7B55FBD091406 /* Pods_TLMHttpDNS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TLMHttpDNS_Tests.framework; path = "Pods-TLMHttpDNS_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		756120B5F4ED37246BA038332A20C39B /* Pods-TLMHttpDNS_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TLMHttpDNS_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		796B36B3F95D3D4EEBE0D0804FCBD52B /* TLMHttpDNS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TLMHttpDNS-umbrella.h"; sourceTree = "<group>"; };
-		7D093E29910C490C6E32CF50471EF7F9 /* Pods_TLMHttpDNS_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TLMHttpDNS_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D051209E7C30659E856F0AB5DECFE25 /* TLMHttpDNS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TLMHttpDNS.h; path = TLMHttpDNS/Classes/TLMHttpDNS.h; sourceTree = "<group>"; };
+		7D093E29910C490C6E32CF50471EF7F9 /* Pods_TLMHttpDNS_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TLMHttpDNS_Example.framework; path = "Pods-TLMHttpDNS_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85EA42EEB987E8D0A6C1BD148160BF4B /* Pods-TLMHttpDNS_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TLMHttpDNS_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		8A0E8A43DC22C0C0C49949AD6AA738B6 /* TLMHttpDNS.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = TLMHttpDNS.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8B2D49262ABB248E56CCD48A0D024058 /* Pods-TLMHttpDNS_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLMHttpDNS_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8C59D7BF358945107DE1F7EF2D635604 /* Pods-TLMHttpDNS_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TLMHttpDNS_Example-umbrella.h"; sourceTree = "<group>"; };
 		9C1A4E9428BFC05E76A1B04975E6C362 /* Pods-TLMHttpDNS_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TLMHttpDNS_Tests.modulemap"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E1C5C5B838B75DF8FD2171A6938C2EF /* TLMHttpDNS.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TLMHttpDNS.m; path = TLMHttpDNS/Classes/TLMHttpDNS.m; sourceTree = "<group>"; };
+		9E6D52491B361FE25BF4B74CA948928E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		9EA309C20B0385D83EC2F27C0A513EDD /* Pods-TLMHttpDNS_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TLMHttpDNS_Example.modulemap"; sourceTree = "<group>"; };
-		A2CED99DC0B3DA60728E43BE6EAF9A59 /* TLMHttpDNS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TLMHttpDNS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A35C48699E5742F8AA452324FB7B00A3 /* TLMHttpDNS.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = TLMHttpDNS.podspec; sourceTree = "<group>"; tabWidth = 2; };
-		A4CB63831A5EB220F2633C3861230F60 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A2CED99DC0B3DA60728E43BE6EAF9A59 /* TLMHttpDNS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TLMHttpDNS.framework; path = TLMHttpDNS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B418DD8E4BD0368908546DDB4F55E8C2 /* TLMHttpDNS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TLMHttpDNS-umbrella.h"; sourceTree = "<group>"; };
+		BAB5487A1D6621149F5B66B3E60E1FF8 /* TLMURLProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TLMURLProtocol.h; path = TLMHttpDNS/Classes/TLMURLProtocol.h; sourceTree = "<group>"; };
+		BB5F87EFE9209589A33B5DE796A6A776 /* TLMHttpDNS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TLMHttpDNS-Info.plist"; sourceTree = "<group>"; };
 		C048C64F151E445F6C345B254EC10FA9 /* Pods-TLMHttpDNS_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TLMHttpDNS_Example-Info.plist"; sourceTree = "<group>"; };
+		C9343E3F2EC6F382F5232A35BEA183DB /* NSURLSession+SynchronousTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLSession+SynchronousTask.m"; path = "TLMHttpDNS/Classes/NSURLSession+SynchronousTask.m"; sourceTree = "<group>"; };
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D184DF220CB7D4FE53DBE885B0145ADA /* TLMHttpDNS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TLMHttpDNS.xcconfig; sourceTree = "<group>"; };
-		D768C398DDA3B1C3AFF4931B21C4DAED /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		CBC6F2FED7B65A4BEEDD4341EF266281 /* TLMHttpDNS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TLMHttpDNS.modulemap; sourceTree = "<group>"; };
+		D157DD5F949D9B620C85D72D97E60163 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		D27DBC64B2896FD3E1A458980E5D7B13 /* TLMHttpDNS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TLMHttpDNS-prefix.pch"; sourceTree = "<group>"; };
+		D7D21FA3D45D5D265CBC143C103B5360 /* NSURLSession+SynchronousTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLSession+SynchronousTask.h"; path = "TLMHttpDNS/Classes/NSURLSession+SynchronousTask.h"; sourceTree = "<group>"; };
+		D84CD74C0627F60FB87C3B51B824E50D /* TLMIPDefinition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TLMIPDefinition.m; path = TLMHttpDNS/Classes/TLMIPDefinition.m; sourceTree = "<group>"; };
 		DC5F11DCE23151BD496EBF4A2C911A9C /* Pods-TLMHttpDNS_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TLMHttpDNS_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E7DDE5CF8CB5659D8163A7AB796EF14C /* Pods-TLMHttpDNS_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TLMHttpDNS_Example-dummy.m"; sourceTree = "<group>"; };
 		F0DDDA9D160BC5B3556CEFEFF383BC5A /* Pods-TLMHttpDNS_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TLMHttpDNS_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F786089E414C003F537E1D3DF6845D26 /* Pods-TLMHttpDNS_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TLMHttpDNS_Tests-dummy.m"; sourceTree = "<group>"; };
-		FEB9077E326A0DE836ECE045D8B50C5E /* TLMHttpDNS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TLMHttpDNS-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,23 +121,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2A6FE09AD5EDC13B0F1CBED9C1545D40 /* Development Pods */ = {
+		20B5E9DAA28AB523E224BF3F153AB5D7 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				30F1FE8442517DB9C00BEE6510979AB9 /* TLMHttpDNS */,
+				CBC6F2FED7B65A4BEEDD4341EF266281 /* TLMHttpDNS.modulemap */,
+				0973F913ED43955E68E31D59D4CAE3EE /* TLMHttpDNS.xcconfig */,
+				01EE71CF9109C95084D7EE39745A0DC8 /* TLMHttpDNS-dummy.m */,
+				BB5F87EFE9209589A33B5DE796A6A776 /* TLMHttpDNS-Info.plist */,
+				D27DBC64B2896FD3E1A458980E5D7B13 /* TLMHttpDNS-prefix.pch */,
+				B418DD8E4BD0368908546DDB4F55E8C2 /* TLMHttpDNS-umbrella.h */,
 			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		30F1FE8442517DB9C00BEE6510979AB9 /* TLMHttpDNS */ = {
-			isa = PBXGroup;
-			children = (
-				3AF071EA4256EA849EFCC96775E39F30 /* ReplaceMe.m */,
-				F9394490957F7978610620FCDCE8BEA1 /* Pod */,
-				E54C9F6F7722EF331B3E54A52BCDEF80 /* Support Files */,
-			);
-			name = TLMHttpDNS;
-			path = ../..;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/TLMHttpDNS";
 			sourceTree = "<group>";
 		};
 		52156FF8D9BEC9BFEB4AA95A0FB9A4BC /* Targets Support Files */ = {
@@ -135,6 +152,28 @@
 				A2CED99DC0B3DA60728E43BE6EAF9A59 /* TLMHttpDNS.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		78D83A59512ADCB83B96B0EBEC07ED48 /* TLMHttpDNS */ = {
+			isa = PBXGroup;
+			children = (
+				22931D3C3859E0A5F2C492F681C1F3B4 /* NSURLProtocol+WKWebView.h */,
+				18747804919CEA7DB9E0DDCDF73256DD /* NSURLProtocol+WKWebView.m */,
+				003CDFEB46397462F7055E722B35616B /* NSURLSession+hook.h */,
+				2D5EE391BE4B315B5CC65FD61DAD9FA3 /* NSURLSession+hook.m */,
+				D7D21FA3D45D5D265CBC143C103B5360 /* NSURLSession+SynchronousTask.h */,
+				C9343E3F2EC6F382F5232A35BEA183DB /* NSURLSession+SynchronousTask.m */,
+				7D051209E7C30659E856F0AB5DECFE25 /* TLMHttpDNS.h */,
+				9E1C5C5B838B75DF8FD2171A6938C2EF /* TLMHttpDNS.m */,
+				21B91AF45C833887CB2264D50988C75C /* TLMIPDefinition.h */,
+				D84CD74C0627F60FB87C3B51B824E50D /* TLMIPDefinition.m */,
+				BAB5487A1D6621149F5B66B3E60E1FF8 /* TLMURLProtocol.h */,
+				127FBCA19DD07ED9C3D0DA5436C6264A /* TLMURLProtocol.m */,
+				C7195FDB5DA5944AD5F688930FDBFB66 /* Pod */,
+				20B5E9DAA28AB523E224BF3F153AB5D7 /* Support Files */,
+			);
+			name = TLMHttpDNS;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		9B055D0CFEA43187E72B03DED11F5662 /* iOS */ = {
@@ -162,6 +201,14 @@
 			path = "Target Support Files/Pods-TLMHttpDNS_Example";
 			sourceTree = "<group>";
 		};
+		9F7501A39B1C9D3A5B0CB001F4AE0873 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78D83A59512ADCB83B96B0EBEC07ED48 /* TLMHttpDNS */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		A6DDF99A1E33B108CC25CE23529BBA8D /* Pods-TLMHttpDNS_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,11 +225,21 @@
 			path = "Target Support Files/Pods-TLMHttpDNS_Tests";
 			sourceTree = "<group>";
 		};
+		C7195FDB5DA5944AD5F688930FDBFB66 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				D157DD5F949D9B620C85D72D97E60163 /* LICENSE */,
+				9E6D52491B361FE25BF4B74CA948928E /* README.md */,
+				8A0E8A43DC22C0C0C49949AD6AA738B6 /* TLMHttpDNS.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				2A6FE09AD5EDC13B0F1CBED9C1545D40 /* Development Pods */,
+				9F7501A39B1C9D3A5B0CB001F4AE0873 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				6DFFC6C172AC1805E2B2056F2EDA0D2F /* Products */,
 				52156FF8D9BEC9BFEB4AA95A0FB9A4BC /* Targets Support Files */,
@@ -195,30 +252,6 @@
 				9B055D0CFEA43187E72B03DED11F5662 /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E54C9F6F7722EF331B3E54A52BCDEF80 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				12384C241C368860B3959E7102056F5C /* TLMHttpDNS.modulemap */,
-				D184DF220CB7D4FE53DBE885B0145ADA /* TLMHttpDNS.xcconfig */,
-				FEB9077E326A0DE836ECE045D8B50C5E /* TLMHttpDNS-dummy.m */,
-				12C3EF7A5E1C6AD354093B5932FC585C /* TLMHttpDNS-Info.plist */,
-				4C823CF9D11791D53A461C433604B9C5 /* TLMHttpDNS-prefix.pch */,
-				796B36B3F95D3D4EEBE0D0804FCBD52B /* TLMHttpDNS-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/TLMHttpDNS";
-			sourceTree = "<group>";
-		};
-		F9394490957F7978610620FCDCE8BEA1 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				D768C398DDA3B1C3AFF4931B21C4DAED /* LICENSE */,
-				A4CB63831A5EB220F2633C3861230F60 /* README.md */,
-				A35C48699E5742F8AA452324FB7B00A3 /* TLMHttpDNS.podspec */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,11 +273,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F88AEA64ED836AA80E75D9BDB0A6AC5F /* Headers */ = {
+		D57F95A32DEA83224ADBF64296FBC3A8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				084989C27AFCD0A39F91C7B7D943E367 /* TLMHttpDNS-umbrella.h in Headers */,
+				AAB6A44BB6263D2302315509C34CF3CB /* NSURLProtocol+WKWebView.h in Headers */,
+				EAC677F79BDE8A557C8482A133B3A477 /* NSURLSession+hook.h in Headers */,
+				9F4B658089DD39AB62C9EA8C625DC03D /* NSURLSession+SynchronousTask.h in Headers */,
+				8A73F59531264F69217D4D4E7A999BE6 /* TLMHttpDNS-umbrella.h in Headers */,
+				31602368B25EA9A714BD75B82ED8599C /* TLMHttpDNS.h in Headers */,
+				D1FEF24C5B9A34FDCE2CB4970FEC46BC /* TLMIPDefinition.h in Headers */,
+				25549D801264AF4705A988D8E7F3DEC0 /* TLMURLProtocol.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +313,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1ED518943E372BDFEA7048B5D6333150 /* Build configuration list for PBXNativeTarget "TLMHttpDNS" */;
 			buildPhases = (
-				F88AEA64ED836AA80E75D9BDB0A6AC5F /* Headers */,
-				C2F69BB9B4F646C6A59229B869356813 /* Sources */,
+				D57F95A32DEA83224ADBF64296FBC3A8 /* Headers */,
+				3EB7DADF8D351C6CD85212C6CF1342A3 /* Sources */,
 				8F7823D54E533C2560BD1DE4CFC87AAA /* Frameworks */,
 				CF7E667D2D3C42FC5B9CCD00F399201D /* Resources */,
 			);
@@ -360,20 +399,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3EB7DADF8D351C6CD85212C6CF1342A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96D5EB6426D21F8E16A4972A3F3D5F37 /* NSURLProtocol+WKWebView.m in Sources */,
+				FDA70CE474CAED13629C3BE04573CAFE /* NSURLSession+hook.m in Sources */,
+				0A566AFDF352CBCB9B6D429DAA232100 /* NSURLSession+SynchronousTask.m in Sources */,
+				80E8B628B96E35F7DD6200F2A2373777 /* TLMHttpDNS-dummy.m in Sources */,
+				95C8DB5D0B4FBFFA73C9B17D92B407B6 /* TLMHttpDNS.m in Sources */,
+				377AED440969D2D0129DDE95EA12C08F /* TLMIPDefinition.m in Sources */,
+				767CE09322E46E5184BEB5C8BF1CF8DD /* TLMURLProtocol.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8B72724EFCB102128DA4244959A566FC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5D61812EA91AE01EDB4883B1E328A7D7 /* Pods-TLMHttpDNS_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C2F69BB9B4F646C6A59229B869356813 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F76452AA1C046F1530038EACA405BF4F /* ReplaceMe.m in Sources */,
-				20E20265F2CA58561516D972BAF8663B /* TLMHttpDNS-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,7 +500,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -464,7 +509,7 @@
 		};
 		15FF60A9D6F2EF252848848F87C0ED8F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D184DF220CB7D4FE53DBE885B0145ADA /* TLMHttpDNS.xcconfig */;
+			baseConfigurationReference = 0973F913ED43955E68E31D59D4CAE3EE /* TLMHttpDNS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -693,7 +738,7 @@
 		};
 		F469E75112C9CEBA21F5F58D1CDA4379 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D184DF220CB7D4FE53DBE885B0145ADA /* TLMHttpDNS.xcconfig */;
+			baseConfigurationReference = 0973F913ED43955E68E31D59D4CAE3EE /* TLMHttpDNS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

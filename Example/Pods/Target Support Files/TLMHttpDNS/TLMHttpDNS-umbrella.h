@@ -10,6 +10,12 @@
 #endif
 #endif
 
+#import "NSURLProtocol+WKWebView.h"
+#import "NSURLSession+hook.h"
+#import "NSURLSession+SynchronousTask.h"
+#import "TLMHttpDNS.h"
+#import "TLMIPDefinition.h"
+#import "TLMURLProtocol.h"
 
 FOUNDATION_EXPORT double TLMHttpDNSVersionNumber;
 FOUNDATION_EXPORT const unsigned char TLMHttpDNSVersionString[];

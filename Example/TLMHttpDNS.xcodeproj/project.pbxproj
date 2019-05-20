@@ -27,6 +27,10 @@
 		8EF7416F228E71C7008FA7B5 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF74169228E71C6008FA7B5 /* TestViewController.m */; };
 		8EF74170228E71C7008FA7B5 /* PostTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF7416A228E71C6008FA7B5 /* PostTestViewController.m */; };
 		8EF74171228E71C7008FA7B5 /* WKWebViewTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF7416C228E71C6008FA7B5 /* WKWebViewTestController.m */; };
+		8EF7418B22926456008FA7B5 /* URLConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF7418A22926456008FA7B5 /* URLConnectionViewController.m */; };
+		8EF7418C22926456008FA7B5 /* URLConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF7418A22926456008FA7B5 /* URLConnectionViewController.m */; };
+		8EF7418F22927D5B008FA7B5 /* CertificateAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF7418E22927D5B008FA7B5 /* CertificateAuthViewController.m */; };
+		8EF7419022927D5B008FA7B5 /* CertificateAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF7418E22927D5B008FA7B5 /* CertificateAuthViewController.m */; };
 		E553D6E98A360603636BD0E1 /* Pods_TLMHttpDNS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3145B93D3C6D07F4C5771519 /* Pods_TLMHttpDNS_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +80,10 @@
 		8EF7416B228E71C6008FA7B5 /* WKWebViewTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewTestController.h; sourceTree = "<group>"; };
 		8EF7416C228E71C6008FA7B5 /* WKWebViewTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewTestController.m; sourceTree = "<group>"; };
 		8EF7416D228E71C6008FA7B5 /* AVPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayerViewController.h; sourceTree = "<group>"; };
+		8EF7418922926456008FA7B5 /* URLConnectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLConnectionViewController.h; sourceTree = "<group>"; };
+		8EF7418A22926456008FA7B5 /* URLConnectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLConnectionViewController.m; sourceTree = "<group>"; };
+		8EF7418D22927D5B008FA7B5 /* CertificateAuthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CertificateAuthViewController.h; sourceTree = "<group>"; };
+		8EF7418E22927D5B008FA7B5 /* CertificateAuthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CertificateAuthViewController.m; sourceTree = "<group>"; };
 		969FC41A064B4145848F055B /* Pods-TLMHttpDNS_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TLMHttpDNS_Example.debug.xcconfig"; path = "Target Support Files/Pods-TLMHttpDNS_Example/Pods-TLMHttpDNS_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		CD18A826B8F3F37E9C702798 /* TLMHttpDNS.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TLMHttpDNS.podspec; path = ../TLMHttpDNS.podspec; sourceTree = "<group>"; };
 		FB353730F00B6EAE55703C25 /* Pods-TLMHttpDNS_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TLMHttpDNS_Example.release.xcconfig"; path = "Target Support Files/Pods-TLMHttpDNS_Example/Pods-TLMHttpDNS_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +160,10 @@
 				8EF7416A228E71C6008FA7B5 /* PostTestViewController.m */,
 				8EF7416B228E71C6008FA7B5 /* WKWebViewTestController.h */,
 				8EF7416C228E71C6008FA7B5 /* WKWebViewTestController.m */,
+				8EF7418922926456008FA7B5 /* URLConnectionViewController.h */,
+				8EF7418A22926456008FA7B5 /* URLConnectionViewController.m */,
+				8EF7418D22927D5B008FA7B5 /* CertificateAuthViewController.h */,
+				8EF7418E22927D5B008FA7B5 /* CertificateAuthViewController.m */,
 				6003F59C195388D20070C39A /* TLMAppDelegate.h */,
 				6003F59D195388D20070C39A /* TLMAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -345,12 +357,14 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TLMHttpDNS_Example/Pods-TLMHttpDNS_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/TLMHttpDNS/TLMHttpDNS.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TLMHttpDNS.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,11 +403,13 @@
 			files = (
 				8EF74170228E71C7008FA7B5 /* PostTestViewController.m in Sources */,
 				6003F59E195388D20070C39A /* TLMAppDelegate.m in Sources */,
+				8EF7418B22926456008FA7B5 /* URLConnectionViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* TLMViewController.m in Sources */,
 				8EF7416E228E71C7008FA7B5 /* AVPlayerViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				8EF74171228E71C7008FA7B5 /* WKWebViewTestController.m in Sources */,
 				8EF7416F228E71C7008FA7B5 /* TestViewController.m in Sources */,
+				8EF7418F22927D5B008FA7B5 /* CertificateAuthViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,7 +417,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EF7418C22926456008FA7B5 /* URLConnectionViewController.m in Sources */,
 				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+				8EF7419022927D5B008FA7B5 /* CertificateAuthViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

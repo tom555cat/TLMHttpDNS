@@ -10,6 +10,8 @@
 #import "TestViewController.h"
 #import "PostTestViewController.h"
 #import "WKWebViewTestController.h"
+#import "URLConnectionViewController.h"
+#import "CertificateAuthViewController.h"
 
 @interface TLMViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -25,7 +27,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 
-    self.dataArray = @[@"正常测试", @"Post请求测试", @"WKWebView测试"];
+    self.dataArray = @[@"正常测试", @"Post请求测试", @"WKWebView测试", @"URLConnection测试", @"客户端证书验证"];
     
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
     self.tableView.delegate = self;
@@ -64,6 +66,12 @@
         [self.navigationController pushViewController:vc animated:YES];
     } else if (indexPath.row == 2) {
         WKWebViewTestController *vc = [[WKWebViewTestController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    } else if (indexPath.row == 3) {
+        URLConnectionViewController *vc = [[URLConnectionViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    } else if (indexPath.row == 4) {
+        CertificateAuthViewController *vc = [[CertificateAuthViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
     return;

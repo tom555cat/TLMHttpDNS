@@ -15,7 +15,7 @@
 #import "NSURLSession+SynchronousTask.h"
 #import "TLMHttpDNS.h"
 #import "TLMIPDefinition.h"
-#import "TLMURLProtocol.h"
+#import "TLMHTTPProtocol.h"
 
 FOUNDATION_EXPORT double TLMHttpDNSVersionNumber;
 FOUNDATION_EXPORT const unsigned char TLMHttpDNSVersionString[];

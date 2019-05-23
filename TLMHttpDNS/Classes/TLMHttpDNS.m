@@ -8,7 +8,7 @@
 
 #import "TLMHttpDNS.h"
 #import "NSURLSession+SynchronousTask.h"
-#import "TLMURLProtocol.h"
+#import "TLMHTTPProtocol.h"
 
 @interface TLMHttpDNS ()
 
@@ -33,7 +33,7 @@
 
 - (void)replaceHostWithIPAsync:(BOOL)async {
     self.async = async;
-    [NSURLProtocol registerClass:[TLMURLProtocol class]];
+    [NSURLProtocol registerClass:[TLMHTTPProtocol class]];
 }
 
 @end

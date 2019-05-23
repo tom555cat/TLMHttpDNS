@@ -5,7 +5,8 @@
 //  Created by tongleiming on 2019/5/20.
 //
 
-#import <Foundation/Foundation.h>
+#ifndef CFHTTPDNSRequestTask_h
+#define CFHTTPDNSRequestTask_h
 
 @class CFHTTPDNSRequestTask;
 @protocol CFHTTPDNSRequestTaskDelegate <NSObject>
@@ -19,7 +20,6 @@
 
 @interface CFHTTPDNSRequestResponse : NSObject
 
-// 这里为什么用CFIndex类型，为什么不用NSInteger?
 @property (nonatomic, assign) CFIndex statusCode;
 @property (nonatomic, copy) NSDictionary *headerFields;
 @property (nonatomic, copy) NSString *httpVersion;
@@ -28,15 +28,24 @@
 
 @interface CFHTTPDNSRequestTask : NSObject
 
+@property (nonatomic, strong, readonly) CFHTTPDNSRequestResponse *response;   // 请求Response
+
+
 - (CFHTTPDNSRequestTask *)initWithURLRequest:(NSURLRequest *)request swizzleRequest:(NSURLRequest *)swizzleRequest delegate:(id<CFHTTPDNSRequestTaskDelegate>)delegate;
 - (void)startLoading;
+- (void)stopLoading;
+- (NSString *)getOriginalRequestHost;
+- (NSHTTPURLResponse *)getRequestResponse;
 
 @end
+
 
 @interface NSInputStream (ReadOutData)
 
 - (NSData *)readOutData;
 
 @end
+
+#endif /* CFHTTPDNSRequestTask_h */
 
 

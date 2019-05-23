@@ -60,7 +60,7 @@
 		63EBCA794142130BBE2C73943DFC55FA /* NSImage+Compatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = 493268F1E6940C43F03D6E236FE8679E /* NSImage+Compatibility.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		686720FAB17FA9D3C9D9A5F4E90F7436 /* TLMHttpDNS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EE71CF9109C95084D7EE39745A0DC8 /* TLMHttpDNS-dummy.m */; };
 		69EA8061CD60E369E386BB30A84A56AA /* NSURLSession+hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5EE391BE4B315B5CC65FD61DAD9FA3 /* NSURLSession+hook.m */; };
-		6AF9532A7CC015B11728150C00567BF7 /* TLMURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 127FBCA19DD07ED9C3D0DA5436C6264A /* TLMURLProtocol.m */; };
+		6AF9532A7CC015B11728150C00567BF7 /* TLMHTTPProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 127FBCA19DD07ED9C3D0DA5436C6264A /* TLMHTTPProtocol.m */; };
 		6B930979CC2B941394EADA84A5A93184 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BCFAACA78F8BC13104DFFD990363A7 /* UIImageView+WebCache.m */; };
 		6CBC33327E5A5014E2B453B56AF5088F /* SDAnimatedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 88D33DAF10AFCFC3C8C0A7CA67ED0372 /* SDAnimatedImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		76E10725F563BA6C3D2FFAE912D20D9C /* SDImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 08A3C74925623444CED9720086135578 /* SDImageCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -81,18 +81,42 @@
 		88B10D4EA5D3699ACE86E2D3D106884A /* UIView+WebCacheOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 79E5912913D0873BC5675751603E6DAE /* UIView+WebCacheOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8972FD1FFD710BEF0E777F7DC010EBE5 /* UIImageView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = C53E4A914C499E1C60C858A9E7D4D971 /* UIImageView+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8DB656CB2B2EF6767AB3F90D1DBA57DA /* SDImageCoderHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B20D9C626EB60CB312F2F886A7BEA6 /* SDImageCoderHelper.m */; };
-		8EF741932292872E008FA7B5 /* NSURLRequest+NSURLProtocolExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EF741912292872E008FA7B5 /* NSURLRequest+NSURLProtocolExtension.h */; };
-		8EF741942292872E008FA7B5 /* NSURLRequest+NSURLProtocolExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EF741912292872E008FA7B5 /* NSURLRequest+NSURLProtocolExtension.h */; };
-		8EF741952292872E008FA7B5 /* NSURLRequest+NSURLProtocolExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EF741912292872E008FA7B5 /* NSURLRequest+NSURLProtocolExtension.h */; };
-		8EF741962292872E008FA7B5 /* NSURLRequest+NSURLProtocolExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF741922292872E008FA7B5 /* NSURLRequest+NSURLProtocolExtension.m */; };
-		8EF741972292872E008FA7B5 /* NSURLRequest+NSURLProtocolExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF741922292872E008FA7B5 /* NSURLRequest+NSURLProtocolExtension.m */; };
-		8EF741982292872E008FA7B5 /* NSURLRequest+NSURLProtocolExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF741922292872E008FA7B5 /* NSURLRequest+NSURLProtocolExtension.m */; };
-		8EF741A32292B6B5008FA7B5 /* CFHTTPDNSRequestTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EF741A12292B6B5008FA7B5 /* CFHTTPDNSRequestTask.h */; };
-		8EF741A42292B6B5008FA7B5 /* CFHTTPDNSRequestTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EF741A12292B6B5008FA7B5 /* CFHTTPDNSRequestTask.h */; };
-		8EF741A52292B6B5008FA7B5 /* CFHTTPDNSRequestTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EF741A12292B6B5008FA7B5 /* CFHTTPDNSRequestTask.h */; };
-		8EF741A62292B6B5008FA7B5 /* CFHTTPDNSRequestTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF741A22292B6B5008FA7B5 /* CFHTTPDNSRequestTask.m */; };
-		8EF741A72292B6B5008FA7B5 /* CFHTTPDNSRequestTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF741A22292B6B5008FA7B5 /* CFHTTPDNSRequestTask.m */; };
-		8EF741A82292B6B5008FA7B5 /* CFHTTPDNSRequestTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF741A22292B6B5008FA7B5 /* CFHTTPDNSRequestTask.m */; };
+		8E9DD3492296C2B1002009EF /* CanonicalRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E9DD33D2296C2AF002009EF /* CanonicalRequest.h */; };
+		8E9DD34A2296C2B1002009EF /* CanonicalRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E9DD33D2296C2AF002009EF /* CanonicalRequest.h */; };
+		8E9DD34B2296C2B1002009EF /* CanonicalRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E9DD33D2296C2AF002009EF /* CanonicalRequest.h */; };
+		8E9DD34C2296C2B1002009EF /* TLMHTTPDNSCookieManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E9DD33E2296C2AF002009EF /* TLMHTTPDNSCookieManager.h */; };
+		8E9DD34D2296C2B1002009EF /* TLMHTTPDNSCookieManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E9DD33E2296C2AF002009EF /* TLMHTTPDNSCookieManager.h */; };
+		8E9DD34E2296C2B1002009EF /* TLMHTTPDNSCookieManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E9DD33E2296C2AF002009EF /* TLMHTTPDNSCookieManager.h */; };
+		8E9DD34F2296C2B1002009EF /* TLMHTTPDNSCookieManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9DD33F2296C2B0002009EF /* TLMHTTPDNSCookieManager.m */; };
+		8E9DD3502296C2B1002009EF /* TLMHTTPDNSCookieManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9DD33F2296C2B0002009EF /* TLMHTTPDNSCookieManager.m */; };
+		8E9DD3512296C2B1002009EF /* TLMHTTPDNSCookieManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9DD33F2296C2B0002009EF /* TLMHTTPDNSCookieManager.m */; };
+		8E9DD3522296C2B1002009EF /* CFHTTPDNSRequestTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9DD3402296C2B0002009EF /* CFHTTPDNSRequestTask.m */; };
+		8E9DD3532296C2B1002009EF /* CFHTTPDNSRequestTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9DD3402296C2B0002009EF /* CFHTTPDNSRequestTask.m */; };
+		8E9DD3542296C2B1002009EF /* CFHTTPDNSRequestTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9DD3402296C2B0002009EF /* CFHTTPDNSRequestTask.m */; };
+		8E9DD3552296C2B1002009EF /* NSURLRequest+NSURLProtocolExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E9DD3412296C2B0002009EF /* NSURLRequest+NSURLProtocolExtension.h */; };
+		8E9DD3562296C2B1002009EF /* NSURLRequest+NSURLProtocolExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E9DD3412296C2B0002009EF /* NSURLRequest+NSURLProtocolExtension.h */; };
+		8E9DD3572296C2B1002009EF /* NSURLRequest+NSURLProtocolExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E9DD3412296C2B0002009EF /* NSURLRequest+NSURLProtocolExtension.h */; };
+		8E9DD3582296C2B1002009EF /* CacheStoragePolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E9DD3422296C2B0002009EF /* CacheStoragePolicy.h */; };
+		8E9DD3592296C2B1002009EF /* CacheStoragePolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E9DD3422296C2B0002009EF /* CacheStoragePolicy.h */; };
+		8E9DD35A2296C2B1002009EF /* CacheStoragePolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E9DD3422296C2B0002009EF /* CacheStoragePolicy.h */; };
+		8E9DD35B2296C2B1002009EF /* NSURLRequest+NSURLProtocolExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9DD3432296C2B0002009EF /* NSURLRequest+NSURLProtocolExtension.m */; };
+		8E9DD35C2296C2B1002009EF /* NSURLRequest+NSURLProtocolExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9DD3432296C2B0002009EF /* NSURLRequest+NSURLProtocolExtension.m */; };
+		8E9DD35D2296C2B1002009EF /* NSURLRequest+NSURLProtocolExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9DD3432296C2B0002009EF /* NSURLRequest+NSURLProtocolExtension.m */; };
+		8E9DD35E2296C2B1002009EF /* CanonicalRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9DD3442296C2B0002009EF /* CanonicalRequest.m */; };
+		8E9DD35F2296C2B1002009EF /* CanonicalRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9DD3442296C2B0002009EF /* CanonicalRequest.m */; };
+		8E9DD3602296C2B1002009EF /* CanonicalRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9DD3442296C2B0002009EF /* CanonicalRequest.m */; };
+		8E9DD3612296C2B1002009EF /* CacheStoragePolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9DD3452296C2B0002009EF /* CacheStoragePolicy.m */; };
+		8E9DD3622296C2B1002009EF /* CacheStoragePolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9DD3452296C2B0002009EF /* CacheStoragePolicy.m */; };
+		8E9DD3632296C2B1002009EF /* CacheStoragePolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9DD3452296C2B0002009EF /* CacheStoragePolicy.m */; };
+		8E9DD3642296C2B1002009EF /* CFHTTPDNSRequestTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E9DD3462296C2B0002009EF /* CFHTTPDNSRequestTask.h */; };
+		8E9DD3652296C2B1002009EF /* CFHTTPDNSRequestTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E9DD3462296C2B0002009EF /* CFHTTPDNSRequestTask.h */; };
+		8E9DD3662296C2B1002009EF /* CFHTTPDNSRequestTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E9DD3462296C2B0002009EF /* CFHTTPDNSRequestTask.h */; };
+		8E9DD3672296C2B1002009EF /* QNSURLSessionDemux.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E9DD3472296C2B0002009EF /* QNSURLSessionDemux.h */; };
+		8E9DD3682296C2B1002009EF /* QNSURLSessionDemux.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E9DD3472296C2B0002009EF /* QNSURLSessionDemux.h */; };
+		8E9DD3692296C2B1002009EF /* QNSURLSessionDemux.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E9DD3472296C2B0002009EF /* QNSURLSessionDemux.h */; };
+		8E9DD36A2296C2B1002009EF /* QNSURLSessionDemux.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9DD3482296C2B1002009EF /* QNSURLSessionDemux.m */; };
+		8E9DD36B2296C2B1002009EF /* QNSURLSessionDemux.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9DD3482296C2B1002009EF /* QNSURLSessionDemux.m */; };
+		8E9DD36C2296C2B1002009EF /* QNSURLSessionDemux.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9DD3482296C2B1002009EF /* QNSURLSessionDemux.m */; };
 		92504EB1DA2038CD95D231EFBBFA3AB2 /* SDWebImageOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 11458C5580608FE99438D2FB5C5F5513 /* SDWebImageOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		940B54FE1BC7D33CA02EC16C50C87972 /* SDImageCoderHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 955E346B93813F09069B1945F95E6AFB /* SDImageCoderHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		941632C110443A2545CA0C179E338432 /* SDImageFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F51C17E353A413D30B74841C2B9A15B /* SDImageFrame.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -121,7 +145,7 @@
 		B1FAB2774531BEF9C0F4E24329E0CC1E /* SDImageLoadersManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 27CC2CDB6C554262E435B9B540B4CF11 /* SDImageLoadersManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B20129A2EF8EC95A6CC752314B39165B /* NSURLSession+hook.h in Headers */ = {isa = PBXBuildFile; fileRef = 003CDFEB46397462F7055E722B35616B /* NSURLSession+hook.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B34BF02BC4055B9F9E44E3D2FB79F333 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D9C2B1592E09AFC6D5395899C4EE4D /* Foundation.framework */; };
-		B46B95BACFD0A1202E91A92A74A37C01 /* TLMURLProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = BAB5487A1D6621149F5B66B3E60E1FF8 /* TLMURLProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B46B95BACFD0A1202E91A92A74A37C01 /* TLMHTTPProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = BAB5487A1D6621149F5B66B3E60E1FF8 /* TLMHTTPProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5B28452AFA02ECF8617036C71E14E94 /* SDWebImageTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 8778F0C32BFE09C63C1549C2AC14DB60 /* SDWebImageTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B7A7B0C31749CFE01D9AE83BB01A3021 /* UIColor+HexString.h in Headers */ = {isa = PBXBuildFile; fileRef = E6BC3022C2BA3EE794846F124EE209A4 /* UIColor+HexString.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		BB01C4FDBA63A8583391F3C0A376BCF4 /* SDWebImageDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 36A6997F9A671F2E1CD0814C229C8944 /* SDWebImageDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -201,7 +225,7 @@
 		10DEAB197A8912204375CF86C974DE7D /* SDImageTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageTransformer.h; path = SDWebImage/SDImageTransformer.h; sourceTree = "<group>"; };
 		11458C5580608FE99438D2FB5C5F5513 /* SDWebImageOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageOperation.h; path = SDWebImage/SDWebImageOperation.h; sourceTree = "<group>"; };
 		125B7EB15E66A02520F633F8C6E236D6 /* UIImage+Transform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Transform.h"; path = "SDWebImage/UIImage+Transform.h"; sourceTree = "<group>"; };
-		127FBCA19DD07ED9C3D0DA5436C6264A /* TLMURLProtocol.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TLMURLProtocol.m; path = TLMHttpDNS/Classes/TLMURLProtocol.m; sourceTree = "<group>"; };
+		127FBCA19DD07ED9C3D0DA5436C6264A /* TLMHTTPProtocol.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TLMHTTPProtocol.m; path = TLMHttpDNS/Classes/TLMHTTPProtocol.m; sourceTree = "<group>"; };
 		146E022066DCB8CEA4C2A783C5FDDEBD /* UIButton+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+WebCache.h"; path = "SDWebImage/UIButton+WebCache.h"; sourceTree = "<group>"; };
 		14AA0B1E366A26EB4038EB98E66BC7A6 /* SDInternalMacros.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDInternalMacros.m; path = SDWebImage/Private/SDInternalMacros.m; sourceTree = "<group>"; };
 		18747804919CEA7DB9E0DDCDF73256DD /* NSURLProtocol+WKWebView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLProtocol+WKWebView.m"; path = "TLMHttpDNS/Classes/NSURLProtocol+WKWebView.m"; sourceTree = "<group>"; };
@@ -275,10 +299,18 @@
 		8B2D49262ABB248E56CCD48A0D024058 /* Pods-TLMHttpDNS_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLMHttpDNS_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8C0F38A7714CCBC4F70BB6E7C41059FD /* SDDiskCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDDiskCache.h; path = SDWebImage/SDDiskCache.h; sourceTree = "<group>"; };
 		8C59D7BF358945107DE1F7EF2D635604 /* Pods-TLMHttpDNS_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TLMHttpDNS_Example-umbrella.h"; sourceTree = "<group>"; };
-		8EF741912292872E008FA7B5 /* NSURLRequest+NSURLProtocolExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+NSURLProtocolExtension.h"; sourceTree = "<group>"; };
-		8EF741922292872E008FA7B5 /* NSURLRequest+NSURLProtocolExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+NSURLProtocolExtension.m"; sourceTree = "<group>"; };
-		8EF741A12292B6B5008FA7B5 /* CFHTTPDNSRequestTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFHTTPDNSRequestTask.h; sourceTree = "<group>"; };
-		8EF741A22292B6B5008FA7B5 /* CFHTTPDNSRequestTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFHTTPDNSRequestTask.m; sourceTree = "<group>"; };
+		8E9DD33D2296C2AF002009EF /* CanonicalRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CanonicalRequest.h; path = TLMHttpDNS/Classes/CanonicalRequest.h; sourceTree = "<group>"; };
+		8E9DD33E2296C2AF002009EF /* TLMHTTPDNSCookieManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TLMHTTPDNSCookieManager.h; path = TLMHttpDNS/Classes/TLMHTTPDNSCookieManager.h; sourceTree = "<group>"; };
+		8E9DD33F2296C2B0002009EF /* TLMHTTPDNSCookieManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TLMHTTPDNSCookieManager.m; path = TLMHttpDNS/Classes/TLMHTTPDNSCookieManager.m; sourceTree = "<group>"; };
+		8E9DD3402296C2B0002009EF /* CFHTTPDNSRequestTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CFHTTPDNSRequestTask.m; path = TLMHttpDNS/Classes/CFHTTPDNSRequestTask.m; sourceTree = "<group>"; };
+		8E9DD3412296C2B0002009EF /* NSURLRequest+NSURLProtocolExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURLRequest+NSURLProtocolExtension.h"; path = "TLMHttpDNS/Classes/NSURLRequest+NSURLProtocolExtension.h"; sourceTree = "<group>"; };
+		8E9DD3422296C2B0002009EF /* CacheStoragePolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CacheStoragePolicy.h; path = TLMHttpDNS/Classes/CacheStoragePolicy.h; sourceTree = "<group>"; };
+		8E9DD3432296C2B0002009EF /* NSURLRequest+NSURLProtocolExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURLRequest+NSURLProtocolExtension.m"; path = "TLMHttpDNS/Classes/NSURLRequest+NSURLProtocolExtension.m"; sourceTree = "<group>"; };
+		8E9DD3442296C2B0002009EF /* CanonicalRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CanonicalRequest.m; path = TLMHttpDNS/Classes/CanonicalRequest.m; sourceTree = "<group>"; };
+		8E9DD3452296C2B0002009EF /* CacheStoragePolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CacheStoragePolicy.m; path = TLMHttpDNS/Classes/CacheStoragePolicy.m; sourceTree = "<group>"; };
+		8E9DD3462296C2B0002009EF /* CFHTTPDNSRequestTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CFHTTPDNSRequestTask.h; path = TLMHttpDNS/Classes/CFHTTPDNSRequestTask.h; sourceTree = "<group>"; };
+		8E9DD3472296C2B0002009EF /* QNSURLSessionDemux.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QNSURLSessionDemux.h; path = TLMHttpDNS/Classes/QNSURLSessionDemux.h; sourceTree = "<group>"; };
+		8E9DD3482296C2B1002009EF /* QNSURLSessionDemux.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QNSURLSessionDemux.m; path = TLMHttpDNS/Classes/QNSURLSessionDemux.m; sourceTree = "<group>"; };
 		90FAC625760641213FCC4799DAF2089B /* SDWebImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImage.h; path = WebImage/SDWebImage.h; sourceTree = "<group>"; };
 		92721107817D57172F9DC9FF2EA9B824 /* SDWebImageDownloaderConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderConfig.h; path = SDWebImage/SDWebImageDownloaderConfig.h; sourceTree = "<group>"; };
 		929F1ADF110A8FC3882163262516F01C /* SDImageCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCoder.m; path = SDWebImage/SDImageCoder.m; sourceTree = "<group>"; };
@@ -306,7 +338,7 @@
 		B418DD8E4BD0368908546DDB4F55E8C2 /* TLMHttpDNS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TLMHttpDNS-umbrella.h"; sourceTree = "<group>"; };
 		B4B20D9C626EB60CB312F2F886A7BEA6 /* SDImageCoderHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCoderHelper.m; path = SDWebImage/SDImageCoderHelper.m; sourceTree = "<group>"; };
 		B4B2E8C0F431F7540995A0A2494192D2 /* SDImageIOCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageIOCoder.m; path = SDWebImage/SDImageIOCoder.m; sourceTree = "<group>"; };
-		BAB5487A1D6621149F5B66B3E60E1FF8 /* TLMURLProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TLMURLProtocol.h; path = TLMHttpDNS/Classes/TLMURLProtocol.h; sourceTree = "<group>"; };
+		BAB5487A1D6621149F5B66B3E60E1FF8 /* TLMHTTPProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TLMHTTPProtocol.h; path = TLMHttpDNS/Classes/TLMHTTPProtocol.h; sourceTree = "<group>"; };
 		BB5F87EFE9209589A33B5DE796A6A776 /* TLMHttpDNS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TLMHttpDNS-Info.plist"; sourceTree = "<group>"; };
 		BE5C86B72E95C3A254EC59A26EF412B5 /* SDImageGraphics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageGraphics.h; path = SDWebImage/SDImageGraphics.h; sourceTree = "<group>"; };
 		BF0F065A5077309090673750D390CAC7 /* NSBezierPath+RoundedCorners.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBezierPath+RoundedCorners.h"; path = "SDWebImage/Private/NSBezierPath+RoundedCorners.h"; sourceTree = "<group>"; };
@@ -575,8 +607,18 @@
 		78D83A59512ADCB83B96B0EBEC07ED48 /* TLMHttpDNS */ = {
 			isa = PBXGroup;
 			children = (
-				8EF741912292872E008FA7B5 /* NSURLRequest+NSURLProtocolExtension.h */,
-				8EF741922292872E008FA7B5 /* NSURLRequest+NSURLProtocolExtension.m */,
+				8E9DD3422296C2B0002009EF /* CacheStoragePolicy.h */,
+				8E9DD3452296C2B0002009EF /* CacheStoragePolicy.m */,
+				8E9DD33D2296C2AF002009EF /* CanonicalRequest.h */,
+				8E9DD3442296C2B0002009EF /* CanonicalRequest.m */,
+				8E9DD3462296C2B0002009EF /* CFHTTPDNSRequestTask.h */,
+				8E9DD3402296C2B0002009EF /* CFHTTPDNSRequestTask.m */,
+				8E9DD3412296C2B0002009EF /* NSURLRequest+NSURLProtocolExtension.h */,
+				8E9DD3432296C2B0002009EF /* NSURLRequest+NSURLProtocolExtension.m */,
+				8E9DD3472296C2B0002009EF /* QNSURLSessionDemux.h */,
+				8E9DD3482296C2B1002009EF /* QNSURLSessionDemux.m */,
+				8E9DD33E2296C2AF002009EF /* TLMHTTPDNSCookieManager.h */,
+				8E9DD33F2296C2B0002009EF /* TLMHTTPDNSCookieManager.m */,
 				22931D3C3859E0A5F2C492F681C1F3B4 /* NSURLProtocol+WKWebView.h */,
 				18747804919CEA7DB9E0DDCDF73256DD /* NSURLProtocol+WKWebView.m */,
 				003CDFEB46397462F7055E722B35616B /* NSURLSession+hook.h */,
@@ -587,12 +629,10 @@
 				9E1C5C5B838B75DF8FD2171A6938C2EF /* TLMHttpDNS.m */,
 				21B91AF45C833887CB2264D50988C75C /* TLMIPDefinition.h */,
 				D84CD74C0627F60FB87C3B51B824E50D /* TLMIPDefinition.m */,
-				BAB5487A1D6621149F5B66B3E60E1FF8 /* TLMURLProtocol.h */,
-				127FBCA19DD07ED9C3D0DA5436C6264A /* TLMURLProtocol.m */,
+				BAB5487A1D6621149F5B66B3E60E1FF8 /* TLMHTTPProtocol.h */,
+				127FBCA19DD07ED9C3D0DA5436C6264A /* TLMHTTPProtocol.m */,
 				C7195FDB5DA5944AD5F688930FDBFB66 /* Pod */,
 				20B5E9DAA28AB523E224BF3F153AB5D7 /* Support Files */,
-				8EF741A12292B6B5008FA7B5 /* CFHTTPDNSRequestTask.h */,
-				8EF741A22292B6B5008FA7B5 /* CFHTTPDNSRequestTask.m */,
 			);
 			name = TLMHttpDNS;
 			path = ../..;
@@ -759,15 +799,19 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E9DD3692296C2B1002009EF /* QNSURLSessionDemux.h in Headers */,
 				07988EF5213F53D4CC72884EB4B094E6 /* NSURLProtocol+WKWebView.h in Headers */,
+				8E9DD34B2296C2B1002009EF /* CanonicalRequest.h in Headers */,
+				8E9DD3662296C2B1002009EF /* CFHTTPDNSRequestTask.h in Headers */,
+				8E9DD35A2296C2B1002009EF /* CacheStoragePolicy.h in Headers */,
 				B20129A2EF8EC95A6CC752314B39165B /* NSURLSession+hook.h in Headers */,
 				044BB5977A4B7089E3CF541A0BE0071E /* NSURLSession+SynchronousTask.h in Headers */,
+				8E9DD34E2296C2B1002009EF /* TLMHTTPDNSCookieManager.h in Headers */,
 				7DC266ACC839C3862604FD7C3DA68CB3 /* TLMHttpDNS-umbrella.h in Headers */,
 				4129CCE14A59C7B5B17C9C2F8390536A /* TLMHttpDNS.h in Headers */,
 				1F1B46D39A3A8F16DA0B26FDAC9FB78B /* TLMIPDefinition.h in Headers */,
-				8EF741952292872E008FA7B5 /* NSURLRequest+NSURLProtocolExtension.h in Headers */,
-				B46B95BACFD0A1202E91A92A74A37C01 /* TLMURLProtocol.h in Headers */,
-				8EF741A52292B6B5008FA7B5 /* CFHTTPDNSRequestTask.h in Headers */,
+				8E9DD3572296C2B1002009EF /* NSURLRequest+NSURLProtocolExtension.h in Headers */,
+				B46B95BACFD0A1202E91A92A74A37C01 /* TLMHTTPProtocol.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -775,9 +819,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EF741942292872E008FA7B5 /* NSURLRequest+NSURLProtocolExtension.h in Headers */,
 				419F4A768F9EA7C4BCDE1E9F93028FA1 /* Pods-TLMHttpDNS_Tests-umbrella.h in Headers */,
-				8EF741A42292B6B5008FA7B5 /* CFHTTPDNSRequestTask.h in Headers */,
+				8E9DD3682296C2B1002009EF /* QNSURLSessionDemux.h in Headers */,
+				8E9DD34D2296C2B1002009EF /* TLMHTTPDNSCookieManager.h in Headers */,
+				8E9DD3652296C2B1002009EF /* CFHTTPDNSRequestTask.h in Headers */,
+				8E9DD3562296C2B1002009EF /* NSURLRequest+NSURLProtocolExtension.h in Headers */,
+				8E9DD3592296C2B1002009EF /* CacheStoragePolicy.h in Headers */,
+				8E9DD34A2296C2B1002009EF /* CanonicalRequest.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -785,9 +833,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EF741932292872E008FA7B5 /* NSURLRequest+NSURLProtocolExtension.h in Headers */,
 				17D0C4E930D3CAE890D5334B4CF83F6B /* Pods-TLMHttpDNS_Example-umbrella.h in Headers */,
-				8EF741A32292B6B5008FA7B5 /* CFHTTPDNSRequestTask.h in Headers */,
+				8E9DD3672296C2B1002009EF /* QNSURLSessionDemux.h in Headers */,
+				8E9DD34C2296C2B1002009EF /* TLMHTTPDNSCookieManager.h in Headers */,
+				8E9DD3642296C2B1002009EF /* CFHTTPDNSRequestTask.h in Headers */,
+				8E9DD3552296C2B1002009EF /* NSURLRequest+NSURLProtocolExtension.h in Headers */,
+				8E9DD3582296C2B1002009EF /* CacheStoragePolicy.h in Headers */,
+				8E9DD3492296C2B1002009EF /* CanonicalRequest.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -937,12 +989,16 @@
 				39DE94B2AA6B9266877BE5F949B515C7 /* NSURLProtocol+WKWebView.m in Sources */,
 				69EA8061CD60E369E386BB30A84A56AA /* NSURLSession+hook.m in Sources */,
 				DE7DAC62D04D1EEECF8A2581DBDD958C /* NSURLSession+SynchronousTask.m in Sources */,
-				8EF741A82292B6B5008FA7B5 /* CFHTTPDNSRequestTask.m in Sources */,
-				8EF741982292872E008FA7B5 /* NSURLRequest+NSURLProtocolExtension.m in Sources */,
+				8E9DD35D2296C2B1002009EF /* NSURLRequest+NSURLProtocolExtension.m in Sources */,
+				8E9DD3632296C2B1002009EF /* CacheStoragePolicy.m in Sources */,
+				8E9DD3542296C2B1002009EF /* CFHTTPDNSRequestTask.m in Sources */,
+				8E9DD3512296C2B1002009EF /* TLMHTTPDNSCookieManager.m in Sources */,
 				686720FAB17FA9D3C9D9A5F4E90F7436 /* TLMHttpDNS-dummy.m in Sources */,
 				6331950FF9DC64393684828BCF5BB5CD /* TLMHttpDNS.m in Sources */,
 				F98AD1B02FA34DD03DBCA6BF47C47604 /* TLMIPDefinition.m in Sources */,
-				6AF9532A7CC015B11728150C00567BF7 /* TLMURLProtocol.m in Sources */,
+				6AF9532A7CC015B11728150C00567BF7 /* TLMHTTPProtocol.m in Sources */,
+				8E9DD36C2296C2B1002009EF /* QNSURLSessionDemux.m in Sources */,
+				8E9DD3602296C2B1002009EF /* CanonicalRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -950,9 +1006,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EF741A62292B6B5008FA7B5 /* CFHTTPDNSRequestTask.m in Sources */,
+				8E9DD3522296C2B1002009EF /* CFHTTPDNSRequestTask.m in Sources */,
 				1EF267364A0DBE1E35CDDB3A1CDA323C /* Pods-TLMHttpDNS_Example-dummy.m in Sources */,
-				8EF741962292872E008FA7B5 /* NSURLRequest+NSURLProtocolExtension.m in Sources */,
+				8E9DD35E2296C2B1002009EF /* CanonicalRequest.m in Sources */,
+				8E9DD34F2296C2B1002009EF /* TLMHTTPDNSCookieManager.m in Sources */,
+				8E9DD3612296C2B1002009EF /* CacheStoragePolicy.m in Sources */,
+				8E9DD36A2296C2B1002009EF /* QNSURLSessionDemux.m in Sources */,
+				8E9DD35B2296C2B1002009EF /* NSURLRequest+NSURLProtocolExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1023,9 +1083,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EF741A72292B6B5008FA7B5 /* CFHTTPDNSRequestTask.m in Sources */,
+				8E9DD3532296C2B1002009EF /* CFHTTPDNSRequestTask.m in Sources */,
 				79E92C704C2ACCBE7AFC8C22C4B1D7A2 /* Pods-TLMHttpDNS_Tests-dummy.m in Sources */,
-				8EF741972292872E008FA7B5 /* NSURLRequest+NSURLProtocolExtension.m in Sources */,
+				8E9DD35F2296C2B1002009EF /* CanonicalRequest.m in Sources */,
+				8E9DD3502296C2B1002009EF /* TLMHTTPDNSCookieManager.m in Sources */,
+				8E9DD3622296C2B1002009EF /* CacheStoragePolicy.m in Sources */,
+				8E9DD36B2296C2B1002009EF /* QNSURLSessionDemux.m in Sources */,
+				8E9DD35C2296C2B1002009EF /* NSURLRequest+NSURLProtocolExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

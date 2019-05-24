@@ -23,6 +23,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		8E9DD36F22978265002009EF /* DNSPodManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9DD36E22978265002009EF /* DNSPodManager.m */; };
 		8EF7416E228E71C7008FA7B5 /* AVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF74168228E71C6008FA7B5 /* AVPlayerViewController.m */; };
 		8EF7416F228E71C7008FA7B5 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF74169228E71C6008FA7B5 /* TestViewController.m */; };
 		8EF74170228E71C7008FA7B5 /* PostTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF7416A228E71C6008FA7B5 /* PostTestViewController.m */; };
@@ -72,6 +73,8 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8E9DD36D22978265002009EF /* DNSPodManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNSPodManager.h; sourceTree = "<group>"; };
+		8E9DD36E22978265002009EF /* DNSPodManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNSPodManager.m; sourceTree = "<group>"; };
 		8EF74166228E71C6008FA7B5 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		8EF74167228E71C6008FA7B5 /* PostTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostTestViewController.h; sourceTree = "<group>"; };
 		8EF74168228E71C6008FA7B5 /* AVPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVPlayerViewController.m; sourceTree = "<group>"; };
@@ -172,6 +175,8 @@
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				8E9DD36D22978265002009EF /* DNSPodManager.h */,
+				8E9DD36E22978265002009EF /* DNSPodManager.m */,
 			);
 			name = "Example for TLMHttpDNS";
 			path = TLMHttpDNS;
@@ -406,6 +411,7 @@
 				8EF7418B22926456008FA7B5 /* URLConnectionViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* TLMViewController.m in Sources */,
 				8EF7416E228E71C7008FA7B5 /* AVPlayerViewController.m in Sources */,
+				8E9DD36F22978265002009EF /* DNSPodManager.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				8EF74171228E71C7008FA7B5 /* WKWebViewTestController.m in Sources */,
 				8EF7416F228E71C7008FA7B5 /* TestViewController.m in Sources */,

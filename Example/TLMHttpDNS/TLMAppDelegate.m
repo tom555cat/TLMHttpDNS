@@ -7,15 +7,17 @@
 //
 
 #import "TLMAppDelegate.h"
-#import "TLMHttpDNS.h"
+#import "DNSPodManager.h"
 
 @implementation TLMAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    [TLMHttpDNS sharedInstance].resolveHosts = @[@"www.baidu.com", @"dalingjia.com"];
-    [[TLMHttpDNS sharedInstance] replaceHostWithIPAsync:YES];
+    [[DNSPodManager sharedInstance] start];
+    
+//    // Override point for customization after application launch.
+//    [TLMHttpDNS sharedInstance].resolveHosts = @[@"www.baidu.com", @"dalingjia.com"];
+//    [[TLMHttpDNS sharedInstance] replaceHostWithIPAsync:YES];
     return YES;
 }
 

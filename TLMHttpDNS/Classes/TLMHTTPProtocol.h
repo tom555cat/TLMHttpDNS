@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param url 网络请求的url
  @return YES,继续处理;NO,不进行处理
  */
-- (bool)protocolShouldHandleURL:(NSURL*)url;
+- (BOOL)protocolShouldHandleURL:(NSURL*)url;
 
 @optional
 
@@ -59,6 +59,10 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface TLMHTTPProtocol : NSURLProtocol
+
++ (void)start;
+
++ (void)setDelegate:(id<TLMHTTPProtocolDelegate>)newValue;
 
 @end
 

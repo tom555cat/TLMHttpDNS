@@ -28,9 +28,16 @@
 - (instancetype)init
 {
     if (self = [super init]) {
+        //If the domain does not start with a dot, then the cookie is only sent to the exact host specified by the domain. If the domain does start with a dot, then the cookie is sent to other hosts in that domain as well, subject to certain restrictions. See RFC 6265 for more detail.
         filterBlock = ^BOOL(NSHTTPCookie *cookie, NSURL *URL) {
-            if ([URL.host containsString:cookie.domain]) {
-                return YES;
+            if ([cookie.domain hasPrefix:@"."]) {
+                if ([URL.host containsString:cookie.domain]) {
+                    return YES;
+                }
+            } else {
+                if ([URL.host isEqualToString:cookie.domain]) {
+                    return YES;
+                }
             }
             return NO;
         };

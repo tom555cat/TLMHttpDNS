@@ -49,7 +49,7 @@ static NSMutableDictionary<NSString *, TLMIPDefinition *> *hostIPMap = nil;
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _async = YES;
+        _async = NO;
         [TLMHTTPProtocol setDelegate:(id<TLMHTTPProtocolDelegate>)self];
     }
     return self;
@@ -120,21 +120,24 @@ static NSMutableDictionary<NSString *, TLMIPDefinition *> *hostIPMap = nil;
     NSInteger ttl = 0;
     
     NSString *result = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
-    NSArray *ttlArray = [result componentsSeparatedByString:@","];
-    if (ttlArray.count > 1) {
-        ttl = [ttlArray[1] integerValue];
-    }
-    NSArray *ipArray = [result componentsSeparatedByString:@";"];
-    if (ipArray.count > 0) {
+    NSArray *partArray = [result componentsSeparatedByString:@","];
+    if (partArray.count == 2) {
+        // ttl部分
+        ttl = [partArray[1] integerValue];
+        
+        // ip地址部分
+        NSArray *ipArray = [partArray[0] componentsSeparatedByString:@";"];
+        if (ipArray.count > 0) {
 #warning 使用返回的第一个ip地址
-        ip = ipArray[0];
+            ip = ipArray[0];
+        }
+        if ([self isIPAddressValid:ip]) {
+            TLMIPDefinition *ipDefinition = [[TLMIPDefinition alloc] initWithIP:ip serverTTL:ttl];
+            return ipDefinition;
+        }
     }
-    if ([self isIPAddressValid:ip]) {
-        TLMIPDefinition *ipDefinition = [[TLMIPDefinition alloc] initWithIP:ip serverTTL:ttl];
-        return ipDefinition;
-    } else {
-        return nil;
-    }
+    
+    return nil;
 }
 + (BOOL)isIPAddressValid:(NSString *)ipAddress {
     NSArray *components = [ipAddress componentsSeparatedByString:@"."];

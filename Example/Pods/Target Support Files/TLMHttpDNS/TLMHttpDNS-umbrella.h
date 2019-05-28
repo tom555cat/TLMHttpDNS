@@ -18,7 +18,6 @@
 #import "NSURLSession+hook.h"
 #import "NSURLSession+SynchronousTask.h"
 #import "QNSURLSessionDemux.h"
-#import "TLMHttpDNS.h"
 #import "TLMHTTPDNSCookieManager.h"
 #import "TLMHTTPProtocol.h"
 #import "TLMIPDefinition.h"

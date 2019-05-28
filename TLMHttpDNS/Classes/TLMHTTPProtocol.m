@@ -357,7 +357,7 @@ static NSString * kOurRecursiveRequestFlagProperty = @"com.apple.dts.TLMHTTPProt
                 // 处理URL和Host
                 NSMutableURLRequest *swizzleRequest = [recursiveRequest mutableCopy];
                 swizzleRequest.URL = [NSURL URLWithString:newUrl];
-                [swizzleRequest setValue:url.host forHTTPHeaderField:@"host"];
+                //[swizzleRequest setValue:url.host forHTTPHeaderField:@"host"];
                 
                 // 处理cookie，因为url变化，系统不会自动带上原有domain的cookie
                 NSString *cookieString = [[TLMHTTPDNSCookieManager sharedInstance] getRequestCookieHeaderForURL:url];

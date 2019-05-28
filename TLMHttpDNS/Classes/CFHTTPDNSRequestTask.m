@@ -109,16 +109,16 @@ static double DEFAULT_TIMEOUT_INTERVAL = 30.0;
     self.inputStream = (__bridge_transfer NSInputStream *) readStream;
     
     // HTTPS请求处理SNI场景
-//    if ([self isHTTPSScheme]) {
-//        // 设置SNI host信息
-//        NSString *host = [self.swizzleRequest.allHTTPHeaderFields objectForKey:@"host"];
-//        if (!host) {
-//            host = self.originalRequest.URL.host;
-//        }
-//        [self.inputStream setProperty:NSStreamSocketSecurityLevelNegotiatedSSL forKey:NSStreamSocketSecurityLevelKey];
-//        NSDictionary *sslProperties = @{ (__bridge id) kCFStreamSSLPeerName : host };
-//        [self.inputStream setProperty:sslProperties forKey:(__bridge_transfer NSString *) kCFStreamPropertySSLSettings];
-//    }
+    if ([self isHTTPSScheme]) {
+        // 设置SNI host信息
+        NSString *host = [self.swizzleRequest.allHTTPHeaderFields objectForKey:@"host"];
+        if (!host) {
+            host = self.originalRequest.URL.host;
+        }
+        [self.inputStream setProperty:NSStreamSocketSecurityLevelNegotiatedSSL forKey:NSStreamSocketSecurityLevelKey];
+        NSDictionary *sslProperties = @{ (__bridge id) kCFStreamSSLPeerName : host };
+        [self.inputStream setProperty:sslProperties forKey:(__bridge_transfer NSString *) kCFStreamPropertySSLSettings];
+    }
     [self openInputStream];
     
     CFRelease(cfRequest);
@@ -345,7 +345,7 @@ static double DEFAULT_TIMEOUT_INTERVAL = 30.0;
                     SecTrustRef trust = (__bridge SecTrustRef) [self.inputStream propertyForKey:(__bridge NSString *) kCFStreamPropertySSLPeerTrust];
                     SecTrustResultType res = kSecTrustResultInvalid;
                     NSMutableArray *policies = [NSMutableArray array];
-                    NSString *domain = [[self.swizzleRequest allHTTPHeaderFields] valueForKey:@"host"];
+                    NSString *domain = self.swizzleRequest.URL.host;
                     if (domain) {
                         [policies addObject:(__bridge_transfer id) SecPolicyCreateSSL(true, (__bridge CFStringRef) domain)];
                     } else {

@@ -53,6 +53,7 @@
 #import "TLMHTTPDNSCookieManager.h"
 #import "CFHTTPDNSRequestTask.h"
 #import "QNSURLSessionDemux.h"
+#import "NSURLSession+hook.h"
 
 // I use the following typedef to keep myself sane in the face of the wacky
 // Objective-C block syntax.
@@ -100,7 +101,10 @@ static id<TLMHTTPProtocolDelegate> sDelegate;
 
 + (void)start
 {
-    [NSURLProtocol registerClass:self];
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 9.0) {
+        [NSURLProtocol registerClass:self];
+        [NSURLSession hookHTTPProtocol];
+    }
 }
 
 + (id<TLMHTTPProtocolDelegate>)delegate

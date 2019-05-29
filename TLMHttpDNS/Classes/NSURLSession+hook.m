@@ -12,7 +12,7 @@
 
 @implementation NSURLSession (hook)
 
-+ (void)load {
++ (void)hookHTTPProtocol {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         Method method1 = class_getClassMethod([NSURLSession class], @selector(sessionWithConfiguration:));

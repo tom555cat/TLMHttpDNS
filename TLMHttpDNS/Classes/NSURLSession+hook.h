@@ -10,4 +10,6 @@
 
 @interface NSURLSession (hook)
 
++ (void)hookHTTPProtocol;
+
 @end

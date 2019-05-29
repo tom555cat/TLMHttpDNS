@@ -345,7 +345,7 @@ static double DEFAULT_TIMEOUT_INTERVAL = 30.0;
                     SecTrustRef trust = (__bridge SecTrustRef) [self.inputStream propertyForKey:(__bridge NSString *) kCFStreamPropertySSLPeerTrust];
                     SecTrustResultType res = kSecTrustResultInvalid;
                     NSMutableArray *policies = [NSMutableArray array];
-                    NSString *domain = self.swizzleRequest.URL.host;
+                    NSString *domain = [[self.swizzleRequest allHTTPHeaderFields] valueForKey:@"host"];
                     if (domain) {
                         [policies addObject:(__bridge_transfer id) SecPolicyCreateSSL(true, (__bridge CFStringRef) domain)];
                     } else {

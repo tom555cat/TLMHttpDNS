@@ -53,7 +53,8 @@
 #import "TLMHTTPDNSCookieManager.h"
 #import "CFHTTPDNSRequestTask.h"
 #import "QNSURLSessionDemux.h"
-#import "NSURLSession+hook.h"
+//#import "NSURLSession+hook.h"
+#import "NSURLSessionConfiguration+protocol.h"
 
 // I use the following typedef to keep myself sane in the face of the wacky
 // Objective-C block syntax.
@@ -103,7 +104,8 @@ static id<TLMHTTPProtocolDelegate> sDelegate;
 {
     if ([[UIDevice currentDevice].systemVersion floatValue] >= 9.0) {
         [NSURLProtocol registerClass:self];
-        [NSURLSession hookHTTPProtocol];
+        //[NSURLSession hookHTTPProtocol];
+        [NSURLSessionConfiguration hookDefaultSessionConfiguration];
     }
 }
 
@@ -195,7 +197,7 @@ static NSString * kOurRecursiveRequestFlagProperty = @"com.apple.dts.TLMHTTPProt
     // NSURLProtocol subclass.
     
     if (shouldAccept) {
-        shouldAccept = NO && [scheme isEqual:@"http"];
+        shouldAccept = YES && [scheme isEqual:@"http"];
         if ( ! shouldAccept ) {
             shouldAccept = YES && [scheme isEqual:@"https"];
         }

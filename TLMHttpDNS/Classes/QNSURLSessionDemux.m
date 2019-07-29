@@ -1,7 +1,7 @@
 /*
-     File: QNSURLSessionDemux.m
+ File: QNSURLSessionDemux.m
  Abstract: A general class to demux NSURLSession delegate callbacks.
-  Version: 1.1
+ Version: 1.1
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -131,13 +131,13 @@
             configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
         }
         self->_configuration = [configuration copy];
-
+        
         self->_taskInfoByTaskID = [[NSMutableDictionary alloc] init];
-
+        
         self->_sessionDelegateQueue = [[NSOperationQueue alloc] init];
         [self->_sessionDelegateQueue setMaxConcurrentOperationCount:1];
         [self->_sessionDelegateQueue setName:@"QNSURLSessionDemux"];
-
+        
         self->_session = [NSURLSession sessionWithConfiguration:self->_configuration delegate:self delegateQueue:self->_sessionDelegateQueue];
         self->_session.sessionDescription = @"QNSURLSessionDemux";
     }
@@ -148,7 +148,7 @@
 {
     NSURLSessionDataTask *          task;
     QNSURLSessionDemuxTaskInfo *    taskInfo;
-
+    
     NSAssert(request != nil,@"request != nil");
     NSAssert(delegate != nil,@"delegate != nil");
     // modes may be nil
@@ -243,13 +243,13 @@
     QNSURLSessionDemuxTaskInfo *    taskInfo;
     
     taskInfo = [self taskInfoForTask:task];
-
+    
     // This is our last delegate callback so we remove our task info record.
     
     @synchronized (self) {
         [self.taskInfoByTaskID removeObjectForKey:@(taskInfo.task.taskIdentifier)];
     }
-
+    
     // Call the delegate if required.  In that case we invalidate the task info on the client thread 
     // after calling the delegate, otherwise the client thread side of the -performBlock: code can 
     // find itself with an invalidated task info.

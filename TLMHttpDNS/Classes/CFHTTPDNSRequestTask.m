@@ -1,8 +1,9 @@
 //
 //  CFHTTPDNSRequestTask.m
-//  Pods
+//  CFHTTPDNSRequest
 //
-//  Created by tongleiming on 2019/5/20.
+//  Created by junmo on 16/12/8.
+//  Copyright © 2016年 junmo. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

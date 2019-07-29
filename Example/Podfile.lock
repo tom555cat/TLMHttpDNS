@@ -1,7 +1,7 @@
 PODS:
-  - SDWebImage (5.0.3):
-    - SDWebImage/Core (= 5.0.3)
-  - SDWebImage/Core (5.0.3)
+  - SDWebImage (5.0.6):
+    - SDWebImage/Core (= 5.0.6)
+  - SDWebImage/Core (5.0.6)
   - TLMHttpDNS (0.1.0)
 
 DEPENDENCIES:
@@ -17,9 +17,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SDWebImage: d4f87d7d36c8a4d9f9459dc282e0caa057fdf935
+  SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
   TLMHttpDNS: 998cb29e515d4a67778a91116498e3889e24b5f5
 
-PODFILE CHECKSUM: 8aad9a5f55757a043258d336cdb575652aed6413
+PODFILE CHECKSUM: 78b964b38321d9d79eb051e30ec3cd3d1c7de2f4
 
 COCOAPODS: 1.6.1

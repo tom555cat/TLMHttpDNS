@@ -29,7 +29,7 @@
 + (instancetype)newDefaultSessionConfiguration
 {
     NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration newDefaultSessionConfiguration];
-    sessionConfiguration.protocolClasses = @[[NSClassFromString(@"TLMHTTPProtocol") class]];
+    sessionConfiguration.protocolClasses = @[[NSClassFromString(@"XCHTTPProtocol") class]];
     return sessionConfiguration;
 }
 

@@ -13,7 +13,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    //[[DNSPodManager sharedInstance] replaceHostWithIPAsync:NO];
+    [[DNSPodManager sharedInstance] replaceHostWithIPAsync:NO];
     [[DNSPodManager sharedInstance] start];
     
 //    // Override point for customization after application launch.

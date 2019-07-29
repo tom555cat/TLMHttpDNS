@@ -7,14 +7,14 @@
 //
 
 #import "DNSPodManager.h"
-#import "TLMIPDefinition.h"
+#import "XCIPDefinition.h"
 #import "NSURLSession+SynchronousTask.h"
-#import "TLMHTTPProtocol.h"
+#import "XCHTTPProtocol.h"
 
 static NSString *const urlStr = @"http://119.29.29.29/d?dn=%@&ttl=1";
 
 static NSString *const kTLMURLProtocolKey = @"kTLMURLProtocolKey";
-static NSMutableDictionary<NSString *, TLMIPDefinition *> *hostIPMap = nil;
+static NSMutableDictionary<NSString *, XCIPDefinition *> *hostIPMap = nil;
 
 @interface DNSPodManager ()
 
@@ -43,16 +43,21 @@ static NSMutableDictionary<NSString *, TLMIPDefinition *> *hostIPMap = nil;
 }
 
 - (void)start {
-    [TLMHTTPProtocol start];
+    [XCHTTPProtocol start];
 }
 
 - (instancetype)init {
     self = [super init];
     if (self) {
         _async = YES;
-        [TLMHTTPProtocol setDelegate:(id<TLMHTTPProtocolDelegate>)self];
+        [XCHTTPProtocol setDelegate:(id<XCHTTPProtocolDelegate>)self];
     }
     return self;
+}
+
++ (NSArray *)prepareOtherURLProtocols {
+    //return @[[NSClassFromString(@"CustomHTTPProtocol") class]];
+    return @[];
 }
 
 #pragma mark - private
@@ -63,7 +68,7 @@ static NSMutableDictionary<NSString *, TLMIPDefinition *> *hostIPMap = nil;
         hostIPMap = [[NSMutableDictionary alloc] init];
     });
     
-    TLMIPDefinition *ipDefinition = hostIPMap[host];
+    XCIPDefinition *ipDefinition = hostIPMap[host];
     if (!ipDefinition) {
         if ([DNSPodManager sharedInstance].async == YES) {
             [self getIPFromHTTPDNSAsync:host];
@@ -96,13 +101,13 @@ static NSMutableDictionary<NSString *, TLMIPDefinition *> *hostIPMap = nil;
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        TLMIPDefinition *ipDefinition = [self parseHTTPDNSResponse:data];
+        XCIPDefinition *ipDefinition = [self parseHTTPDNSResponse:data];
         hostIPMap[host] = ipDefinition;
     }];
     [dataTask resume];
 }
 // 从HTTPDNS中同步获取IP地址
-+ (TLMIPDefinition *)getIPFromHTTPDNSSync:(NSString *)host {
++ (XCIPDefinition *)getIPFromHTTPDNSSync:(NSString *)host {
     NSString *url = [NSString stringWithFormat:@"http://119.29.29.29/d?dn=%@&ttl=1", host];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:5];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
@@ -111,10 +116,10 @@ static NSMutableDictionary<NSString *, TLMIPDefinition *> *hostIPMap = nil;
     NSError *error = nil;
     NSData *data = [session sendSynchronousDataTaskWithRequest:request returningResponse:&response error:&error];
     
-    TLMIPDefinition *ipDefinition = [self parseHTTPDNSResponse:data];
+    XCIPDefinition *ipDefinition = [self parseHTTPDNSResponse:data];
     return ipDefinition;
 }
-+ (TLMIPDefinition *)parseHTTPDNSResponse:(NSData *)data {
++ (XCIPDefinition *)parseHTTPDNSResponse:(NSData *)data {
     // 解析ip地址和ttl
     NSString *ip;
     NSInteger ttl = 0;
@@ -132,7 +137,7 @@ static NSMutableDictionary<NSString *, TLMIPDefinition *> *hostIPMap = nil;
             ip = ipArray[0];
         }
         if ([self isIPAddressValid:ip]) {
-            TLMIPDefinition *ipDefinition = [[TLMIPDefinition alloc] initWithIP:ip serverTTL:ttl];
+            XCIPDefinition *ipDefinition = [[XCIPDefinition alloc] initWithIP:ip serverTTL:ttl];
             return ipDefinition;
         }
     }
@@ -166,6 +171,75 @@ static NSMutableDictionary<NSString *, TLMIPDefinition *> *hostIPMap = nil;
     }
     return YES;
 }
+
+- (void)protocolDidCompleteURL:(NSURL*)url from:(NSTimeInterval)startTime to:(NSTimeInterval)endTime withStatusCode:(NSInteger)code {
+//    NSString *stringUrl = [NSString stringWithFormat:@"%@",url];
+//    if (stringUrl) {
+//        [self addURLRecord:@{@"n":stringUrl,
+//                             @"st":TIMESTAMP_NUMBER(startTime),
+//                             @"et":TIMESTAMP_NUMBER(endTime),
+//                             @"c":[NSNumber numberWithInteger:code]}];
+//    }
+}
+
+- (void)protocolDidCompleteURL:(NSURL*)url from:(NSTimeInterval)startTime to:(NSTimeInterval)endTime rxBytes:(NSUInteger)rxBytes txBytes:(NSUInteger)txBytes withStatusCode:(NSInteger)code{
+    //    NSString *stringUrl = [NSString stringWithFormat:@"%@",url];
+    //    if (stringUrl) {
+    //        [self addURLRecord:@{@"n":stringUrl,
+    //                             @"st":TIMESTAMP_NUMBER(startTime),
+    //                             @"et":TIMESTAMP_NUMBER(endTime),
+    //                             @"dst":@(0),
+    //                             @"det":@(0),
+    //                             @"tst":@(0),
+    //                             @"tet":@(0),
+    //                             @"sst":@(0),
+    //                             @"set":@(0),
+    //                             @"rst":@(0),
+    //                             @"ret":@(0),
+    //                             @"rpst":@(0),
+    //                             @"rpet":@(0),
+    //                             @"rps":[NSNumber numberWithUnsignedInteger:rxBytes],
+    //                             @"rqs":[NSNumber numberWithUnsignedInteger:txBytes],
+    //                             @"c":[NSNumber numberWithInteger:code]}];
+    //    }
+}
+
+- (void)protocolDidCompleteURL:(NSURL*)url from:(NSTimeInterval)startTime to:(NSTimeInterval)endTime withError:(NSError*)error {
+    //    NSString *stringUrl = [NSString stringWithFormat:@"%@",url];
+    //    if (stringUrl) {
+    //        [self addURLRecord:@{@"n":stringUrl,
+    //                             @"st":TIMESTAMP_NUMBER(startTime),
+    //                             @"et":TIMESTAMP_NUMBER(endTime),
+    //                             @"c":[NSNumber numberWithInteger:[error code]],
+    //                             @"e":[error localizedDescription]}];
+    //    }
+}
+
+- (void)protocolDidCompleteURL:(NSURL*)url from:(NSTimeInterval)startTime to:(NSTimeInterval)endTime rxBytes:(NSUInteger)rxBytes txBytes:(NSUInteger)txBytes netDetailTime:(NSDictionary *)detailDic withStatusCode:(NSInteger)code {
+//    NSString *stringUrl = [NSString stringWithFormat:@"%@",url];
+//    if (stringUrl) {
+//        [self addURLRecord:@{@"n":stringUrl,
+//                             @"st":TIMESTAMP_NUMBER(startTime),
+//                             @"et":TIMESTAMP_NUMBER(endTime),
+//                             @"dst":detailDic[@"dnsSTime"],
+//                             @"det":detailDic[@"dnsETime"],
+//                             @"tst":detailDic[@"tcpSTime"],
+//                             @"tet":detailDic[@"tcpETime"],
+//                             @"sst":detailDic[@"sslSTime"],
+//                             @"set":detailDic[@"sslETime"],
+//                             @"rst":detailDic[@"reqSTime"],
+//                             @"ret":detailDic[@"reqETime"],
+//                             @"rpst":detailDic[@"respSTime"],
+//                             @"rpet":detailDic[@"respETime"],
+//                             @"rps":[NSNumber numberWithUnsignedInteger:rxBytes],
+//                             @"rqs":[NSNumber numberWithUnsignedInteger:txBytes],
+//                             @"c":[NSNumber numberWithInteger:code]}];
+//    }
+}
+
+
+
+
 
 - (NSString *)protocolCFNetworkHTTPDNSGetIPByDomain:(NSString *)domain {
     NSString *ip = [[self class] ipForHost:domain];

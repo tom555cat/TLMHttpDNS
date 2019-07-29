@@ -8,7 +8,7 @@
 
 #import "NSURLSession+hook.h"
 #import <objc/runtime.h>
-#import "TLMHTTPProtocol.h"
+#import "XCHTTPProtocol.h"
 
 @implementation NSURLSession (hook)
 
@@ -35,12 +35,12 @@
     NSURLSessionConfiguration *newConfiguration = configuration;
     if (configuration) {
         NSMutableArray *protocolArray = [NSMutableArray arrayWithArray:configuration.protocolClasses];
-        [protocolArray insertObject:[TLMHTTPProtocol class] atIndex:0];
+        [protocolArray insertObject:[XCHTTPProtocol class] atIndex:0];
         newConfiguration.protocolClasses = protocolArray;
     } else {
         newConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
         NSMutableArray *protocolArray = [NSMutableArray arrayWithArray:configuration.protocolClasses];
-        [protocolArray insertObject:[TLMHTTPProtocol class] atIndex:0];
+        [protocolArray insertObject:[XCHTTPProtocol class] atIndex:0];
         newConfiguration.protocolClasses = protocolArray;
     }
     
@@ -52,12 +52,12 @@
     NSURLSessionConfiguration *newConfiguration = configuration;
     if (configuration) {
         NSMutableArray *protocolArray = [NSMutableArray arrayWithArray:configuration.protocolClasses];
-        [protocolArray insertObject:[TLMHTTPProtocol class] atIndex:0];
+        [protocolArray insertObject:[XCHTTPProtocol class] atIndex:0];
         newConfiguration.protocolClasses = protocolArray;
     } else {
         newConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
         NSMutableArray *protocolArray = [NSMutableArray arrayWithArray:configuration.protocolClasses];
-        [protocolArray insertObject:[TLMHTTPProtocol class] atIndex:0];
+        [protocolArray insertObject:[XCHTTPProtocol class] atIndex:0];
         newConfiguration.protocolClasses = protocolArray;
     }
     

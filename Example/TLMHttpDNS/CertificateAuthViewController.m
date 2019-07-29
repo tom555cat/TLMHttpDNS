@@ -7,7 +7,6 @@
 //
 
 #import "CertificateAuthViewController.h"
-#import "SDWebImage.h"
 
 @interface CertificateAuthViewController ()
 
@@ -19,8 +18,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 300, 500)];
-    [imageView sd_setImageWithURL:[NSURL URLWithString:@""]];
+//    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 300, 500)];
+//    [imageView sd_setImageWithURL:[NSURL URLWithString:@""]];
 }
 
 /*

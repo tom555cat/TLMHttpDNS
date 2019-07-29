@@ -23,7 +23,7 @@
     [NSURLProtocol wk_registerScheme:@"https"];
     
     
-    NSString *url = [NSString stringWithFormat:@"https://www.baidu.com"];
+    NSString *url = [NSString stringWithFormat:@"http://www.tomcat.com:3000/users"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
     
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];

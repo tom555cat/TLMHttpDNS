@@ -24,7 +24,7 @@
     self.textArea = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 800)];
     [self.view addSubview:self.textArea];
     
-    NSString *url = [NSString stringWithFormat:@"https://www.hao123.com"];
+    NSString *url = [NSString stringWithFormat:@"https://click.daling.com"];
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     
